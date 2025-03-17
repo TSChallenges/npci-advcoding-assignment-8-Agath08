@@ -1,11 +1,14 @@
 package com.mystore.app.repositories;
 
-import com.mystore.app.entity.Product;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.mystore.app.entity.Product;
 
 
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
-    // TODO
+   List<Product> findByCategory(String category);
 
 }
